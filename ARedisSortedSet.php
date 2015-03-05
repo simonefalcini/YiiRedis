@@ -158,7 +158,8 @@ class ARedisSortedSet extends ARedisIterableEntity {
 	 */
 	public function getIterator()
 	{
-		return new CMapIterator($this->getData());
+		$data = $this->getData();
+		return new CMapIterator($data);
 	}
 
 
